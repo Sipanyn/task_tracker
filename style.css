@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Tanha";
+}
+body{
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+}
+body.swal2-height-auto {
+    height: 100vh;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    border: 3px solid black;
+    box-shadow: 0 0 21px 13px gainsboro;
+    border-radius: 15px;
+    padding: 20px 30px;
+    width: 50%;
+    min-width: fit-content;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.main h6{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+.input_container{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+border: 3px solid black;
+border-radius: 11px;
+padding: 10px;
+gap: 15px;
+margin-bottom: 40px;
+min-width: 224px;
+}
+.input_container input{
+    border: none;
+    outline: none;
+    direction: rtl;
+    flex-grow: 1;
+    
+}
+.upload_icon{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+.upload_icon:hover{
+    scale: 1.1;
+}
+
+.tasks_container{
+    display: flex;
+    flex-direction: column;
+}
+.task{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: 32px;
+    margin-bottom: 8px;
+}
+ .task::after{
+    content: "";
+    position: absolute;
+    height: 4px;
+    border-radius: 8px;
+    width: 100%;
+    background-color: rgba(128, 128, 128,0.2);
+    bottom: 0px;
+} 
+.checkbox{
+position: absolute;
+left: 0px;
+display: flex;
+flex-direction: row;
+align-items: center;
+gap: 10px;
+}
+.delete_icon{
+position: absolute;
+right: 0px;
+cursor: pointer;
+}
+.delete_icon:hover{
+    scale: 1.2;
+    transform: translateY(-5px);
+}
+input:checked + label{
+    text-decoration: line-through;
+    color:rgba(128, 128, 128,0.5) ;
+}
